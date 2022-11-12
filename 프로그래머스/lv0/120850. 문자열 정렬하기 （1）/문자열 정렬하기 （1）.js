@@ -1,3 +1,6 @@
 function solution(my_string) {
-    return my_string.split("").filter((v) => !isNaN(v)).map((v) => v*1).sort((a,b) => a-b)
+    let num = '0123456789'
+    let str = my_string.split('')
+    let result = str.filter((e)=>num.includes(e))
+    return result.map(n => +n).sort()
 }
